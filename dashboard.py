@@ -49,15 +49,6 @@ st.subheader('New Users per month')
 st.line_chart(data=created_by_2)
 
 
-
-st.write('THIS DF COMES FROM A REMOTE DB!!!')
-st.write(users_df)
-
-
-
-
-
-
 #Get the data
 df_users  = pd.read_csv('data/USERS_MOCK_DATA_1.csv')
 df_users['creado_dia'] = pd.to_datetime(df_users['creado_dia'])
@@ -80,8 +71,6 @@ col1.subheader('New Users per month')
 col1.line_chart(data=created_by)
 
 
-
-
 #Analysis per country 
 
 countries_count = df_users.groupby('pais')['id'].count()
@@ -91,7 +80,6 @@ countries_count_countries_name = countries_count_sorted.index
 
 col2.subheader('Countries with most users')
 col2.write(countries_count_sorted.head(6))
-
 
 
 #Challenges and community analysis 

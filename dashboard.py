@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np 
 import psycopg2
 import datetime 
-import altair as alt 
 import sys
 import connection.queries as queries
 import connection.connection as connection
